@@ -33,22 +33,10 @@ int main(void){
 	for(int i = 0; i < n + 2; i++)	
 		map[i] = new int [n + 2];
 	init_map(map, n);
-//	print_testmap(map, n);
-
 	while(true){
 		print_map(map, n, p, false, "");
 		read_input(map, n, p);
-		/*if(p.r < 1 || p.r > n || p.c < 1 || p.c > n){
-			system("clear");
-			cout << RED_COLOR;
-			cout << "#######################" << endl;
-			cout << "###   INPUT ERROR   ###" << endl;
-			cout << "#######################" << endl;
-			cout << COLOR_RESTORE;
-			continue;
-		}*/
 		update(map, p, n);
-//		print_map(map, n);
 		system("clear");
 		if(is_gameover(map, n, p)){
 			print_map(map, n, p, false, "");
